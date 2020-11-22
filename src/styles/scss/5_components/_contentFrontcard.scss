@@ -1,0 +1,90 @@
+// .imageFrontcard:nth-of-type(2n) {
+//     background-color: red;
+// }
+
+
+
+.imageFrontcard:nth-of-type(2n) {
+    width: 75vw;
+    margin: 20rem auto;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+
+
+    @include breakpoint(tab) {
+        width: 100%;
+        flex-direction: column;
+        margin: 15rem auto;
+
+    }
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        top: -5rem;
+        left: -5rem;
+        background-color: $light-blue;
+        z-index: -1;
+        box-shadow: $dark-shadow;
+        border-radius: $radius2;
+    }
+
+    .contentFront-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        background-color: $pure-white;
+        padding: 5rem 2rem;
+        text-align: center;
+        box-shadow: $dark-shadow;
+        position: absolute;
+        z-index: 5;
+        top: 5rem;
+        left: 0;
+        border-radius: $radius2;
+
+
+        @include breakpoint(tab) {
+            position: relative;
+            transform: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+        }
+    }
+
+    .imageFront-image {
+        width: 65%;
+        align-self: flex-end;
+        box-shadow: $dark-shadow;
+        border-radius: $radius2;
+
+
+
+
+        @include breakpoint(tab) {
+            width: 100%;
+
+        }
+
+
+
+        div {
+            height: 60vh;
+            background-color: $pure-white;
+
+            @include breakpoint(tab) {
+                height: auto;
+
+            }
+        }
+    }
+}

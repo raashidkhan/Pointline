@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+html {
+    font-size: 62.5%;
+    scrollbar-width: thin;
+    scrollbar-color: $dark-blue $white;
+
+
+    @include breakpoint(twok-above) {
+        font-size: 200%;
+    }
+
+    @include breakpoint(large-desktop) {
+        font-size: 100%;
+    }
+
+
+}
+
+::-moz-selection {
+    background-color: $light-blue;
+    color: $white;
+}
+
+::selection {
+    background-color: $light-blue;
+    color: $white;
+}
+
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: $pure-white;
+
+
+
+
+
+    &::-webkit-scrollbar {
+        background-color: $white;
+        width: 0.7rem;
+
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $dark-blue;
+        border-radius: 8px;
+        border: none;
+    }
+
+}
+
+
+main {
+    min-height: 85vh;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+p,
+article {
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+
+img {
+    display: block;
+}

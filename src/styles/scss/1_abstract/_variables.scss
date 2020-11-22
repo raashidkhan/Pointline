@@ -1,0 +1,56 @@
+// Color Variables
+
+$dark-blue:#{hsl(210, 17%, 28%)};
+$light-grey:#{hsl(210, 18%, 91%)};
+$light-blue:#{hsl(212, 18%, 38%)};
+$accent-color:#{hsl(0, 80%, 75%)};
+$white:#{hsl(210, 50%, 98%)};
+$pure-white: #{hsl(0, 0%, 100%)};
+
+//Hex Color Code
+// $dark-blue:#3B4753;
+// $light-grey:#ECF4F9;
+// $light-blue:#5e7185;
+// $accent-color:#9FA9B5;
+// $white:#f9fbfd;
+// $accent-color:#f28a8a;
+
+
+// Font Variables
+// $light-blue:#506072;
+// $light-grey:#e5e9ed;
+$heading-font: 'Josefin Sans',
+sans-serif;
+// $body-font: 'Overpass',
+// sans-serif;
+// $body-font: futura-pt,
+// sans-serif;
+$body-font:'Didact Gothic',
+sans-serif;
+
+
+
+
+
+// Font Size Variables
+$step0: 1.2rem;
+$base-font: 1.6rem;
+$step01: 2.1rem;
+$step02: 2.8rem;
+$step03: 3.7rem;
+$step04: 5rem;
+$step05: 6.7rem;
+$step06:8.9rem;
+$step07:11.9rem;
+
+
+//Border Radius
+$radius2: 0.2rem;
+
+// Box Shadows
+
+$light-shadow:0 1px 1px 0 rgba(66, 66, 66, 0.08),
+0 1px 3px 1px rgba(66, 66, 66, 0.16);
+
+$dark-shadow:0 1rem 1rem 0 rgba(66, 66, 66, 0.09),
+0 1rem 2rem 1rem rgba(66, 66, 66, 0.18)

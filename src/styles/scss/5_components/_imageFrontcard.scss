@@ -1,0 +1,159 @@
+.imageFrontcard {
+    width: 75vw;
+    margin: 10rem auto;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+    @include breakpoint(tab) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 15rem auto;
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 5rem;
+        left: 5rem;
+        background-color: $accent-color;
+        z-index: -1;
+        box-shadow: $dark-shadow;
+        border-radius: $radius2;
+    }
+
+    &-content {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        background-color: $pure-white;
+        padding: 5rem 2rem;
+        text-align: center;
+        box-shadow: $dark-shadow;
+        border-radius: $radius2;
+
+        article {
+            font-size: 1.4rem;
+        }
+
+        @include breakpoint(tab) {
+            width: 100%;
+
+        }
+
+    }
+
+    &-image {
+        width: 55%;
+        position: relative;
+        // align-self: stretch;
+        box-shadow: $dark-shadow;
+        border-radius: $radius2;
+        overflow: hidden;
+
+        @include breakpoint(tab) {
+            width: 100%;
+        }
+
+        div {
+            // min-height: 50vh;
+            height: auto;
+            background-color: $pure-white;
+
+            // img {
+            //     animation: slideIn 300ms ease-out;
+            //     transform-origin: left;
+            // }
+
+
+            @include breakpoint(tab) {
+                height: auto;
+                min-height: auto;
+
+            }
+        }
+    }
+}
+
+// @keyframes slideIn {
+//     0% {
+//         transform: translateY(10%);
+//     }
+
+//     100% {
+//         transform: translateY(0%);
+//     }
+// }
+
+
+
+.imageNextBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    background-color: $pure-white;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    box-sizing: content-box;
+    border-radius: 3rem;
+    cursor: pointer;
+
+    svg {
+        width: 100%;
+    }
+
+}
+
+.imagePrevBtn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $accent-color;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    box-sizing: content-box;
+    border-radius: 3rem;
+    transform: rotate(180deg);
+
+    svg {
+        width: 100%;
+    }
+
+}
+
+.gallery-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    align-self: flex-end;
+    height: auto;
+
+    span {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 1rem;
+        background-color: $pure-white;
+        margin: 0 0.5rem;
+        transition: 200ms ease-out;
+    }
+
+    .active-dot {
+        background-color: $accent-color;
+        transform: scale(1.2);
+    }
+}

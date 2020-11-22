@@ -1,0 +1,880 @@
+// =================
+// Hero section
+// =================
+header {
+    position: relative;
+}
+
+.hero {
+    width: 100vw;
+    display: flex;
+    // background: linear-gradient(rgba(#f9fbfd, .9), rgba(#f9fbfd, .9)),
+    //     url("../../images/bg-low.jpg");
+    // background-size: cover;
+    // background-position: top;
+
+
+    @include breakpoint(tab) {
+        flex-direction: column;
+    }
+
+    &-image {
+        width: 50%;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        padding-right: 10rem;
+
+
+
+        @include breakpoint(tab-land) {
+            padding-right: 0;
+        }
+
+        @include breakpoint(tab) {
+            width: 100%;
+            padding-right: 0;
+            margin: 0 auto;
+        }
+
+        @include breakpoint(phone) {
+            width: 100%;
+            padding: 0;
+        }
+
+        &::after {
+            content: "";
+            width: 50%;
+            height: 95%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $light-grey;
+            z-index: -1;
+        }
+
+        &--socialIcons {
+            margin-bottom: 10rem;
+            width: 10rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include breakpoint(tab-land) {
+                width: 5rem;
+            }
+
+            @include breakpoint(tab) {
+                display: none;
+                width: 0;
+            }
+
+            a img {
+                display: block;
+                width: 2.5rem;
+                height: 2.5rem;
+                margin: 1.5rem 0;
+
+                @include breakpoint(phone) {
+                    display: none;
+                }
+            }
+        }
+
+        &--img {
+            height: 92vh;
+            width: 85%;
+            margin-top: 8vh;
+
+            @include breakpoint(tab) {
+                width: 100%;
+                margin-top: 0;
+            }
+
+        }
+    }
+
+    &-content {
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: relative;
+        // overflow: hidden; //Fix for scroll bar jump
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            background-color: $light-grey;
+            width: 120%;
+            height: 40%;
+            z-index: -1;
+
+            @include breakpoint(tab) {
+                display: none;
+
+            }
+        }
+
+
+
+        @include breakpoint(tab) {
+            margin: 0 auto;
+            margin-top: -15vh;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.85);
+            width: 90vw;
+            align-items: center;
+            justify-content: center;
+            padding-top: 2rem;
+
+        }
+
+        @include breakpoint(phone) {
+            padding-bottom: 0;
+
+        }
+
+        .hero-heading {
+
+            @include breakpoint(phone) {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    order: 2;
+                }
+
+                h2 {
+                    order: 1;
+                }
+            }
+        }
+
+        .hero-slider {
+            // position: relative;
+            // -webkit-backface-visibility: hidden;
+            // backface-visibility: hidden;
+            // cursor: -webkit-grab;
+            // cursor: grab;
+            // position: relative;
+            // display: grid;
+            // grid-template-columns: 33.3% 33.3% 33.3%;
+            // grid-auto-columns: 33.3%;
+            // grid-auto-flow: column;
+            // gap: 1.5rem;
+            // overflow: scroll hidden;
+            // -webkit-overflow-scrolling: touch;
+            // width: 100%;
+            // scrollbar-width: thin;
+            // scrollbar-color: $light-blue transparent;
+
+
+            width: 100%;
+            position: relative;
+            display: grid;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+            grid-auto-flow: column;
+            grid-auto-columns: 33.3%;
+            align-items: stretch;
+            gap: 1.5rem;
+            overflow: scroll hidden;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            cursor: grab;
+            scrollbar-width: thin;
+            scrollbar-color: $dark-blue $white;
+
+            @include breakpoint(tab) {
+                width: 100%;
+                grid-template-columns: 50% 50%;
+                grid-auto-columns: 50%;
+                gap: 1rem;
+                background-color: $white;
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+                grid-template-columns: 95%;
+                grid-auto-columns: 95%;
+                gap: 1rem;
+                background-color: $white;
+            }
+
+            &::-webkit-scrollbar {
+                background-color: transparent;
+                height: 0.25rem;
+                width: 0;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $light-blue;
+                border-radius: 5px;
+                border: none;
+
+            }
+
+
+        }
+    }
+}
+
+
+
+
+
+
+.hero-slider--projectCard {
+    border-radius: $radius2;
+    box-shadow: $light-shadow;
+    margin: 0.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    text-align: center;
+    background-color: $pure-white;
+
+
+    @include breakpoint(phone) {
+        text-align: center;
+
+    }
+
+
+    .projectName {
+        margin-top: 1.6rem;
+        font-family: $heading-font;
+    }
+
+    .projectAddress {
+        font-family: $heading-font;
+        color: $accent-color;
+    }
+
+    .projectimage {
+        height: 25vh;
+
+
+
+        @include breakpoint(phone) {
+            height: 40vh;
+        }
+    }
+
+
+}
+
+
+
+
+.project-controls {
+    width: 100%;
+    margin-left: auto;
+    padding: 2rem 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+
+
+
+    @include breakpoint(tab) {
+        width: 100%;
+        padding: 1rem 0;
+        margin: 0;
+        justify-content: start;
+        background-color: $pure-white;
+
+    }
+
+
+}
+
+
+// =================
+// About Us section
+// =================
+
+
+#aboutPointline {
+    width: 100vw;
+
+
+    .aboutPointline {
+        display: flex;
+        width: 85vw;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint(tab) {
+            width: 100%;
+            padding: 0 4rem;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
+
+
+        @include breakpoint(phone) {
+            padding: 0 2rem;
+
+        }
+
+
+        &-content {
+            width: 40%;
+            padding-right: 8rem;
+            text-align: justify;
+
+
+
+            @include breakpoint(tab-land) {
+                padding-right: 0;
+            }
+
+            @include breakpoint(tab) {
+                width: 100%;
+                padding: 0;
+            }
+
+        }
+
+        &-image {
+            width: 60%;
+            padding: 0 2rem;
+            height: 60vh;
+            position: relative;
+
+            div {
+                box-shadow: $light-shadow;
+                border-radius: $radius2;
+            }
+
+
+            @include breakpoint(tab) {
+                width: 100%;
+                padding: 0;
+                margin-top: 3.2rem;
+                height: 50vh;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -7.5vw;
+                transform: translateY(-50%);
+                width: 87.5%;
+                height: 140%;
+                background-image:
+                    linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+                    url("../../images/about-us-bg.jpg");
+                background-size: cover;
+                z-index: -1;
+
+
+                @include breakpoint(tab) {
+                    display: none;
+                }
+            }
+
+
+        }
+    }
+}
+
+
+
+// =================
+// Services section
+// =================
+
+
+#servicesPointline {
+    width: 100vw;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 10vw;
+        height: calc(100% + 30rem);
+        top: -15rem;
+        right: 0;
+        background-color: $light-grey;
+        z-index: -2;
+
+        @include breakpoint(phone) {
+            display: none;
+
+        }
+    }
+
+    .servicesPointline {
+        width: 85vw;
+        margin: 0 auto;
+
+        @include breakpoint(phone) {
+            width: 100%;
+            padding: 0 2rem;
+
+        }
+
+        &-heading {
+            text-align: center;
+            position: relative;
+
+            hr {
+                margin: 0 auto;
+            }
+
+
+        }
+
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+
+
+
+            @include breakpoint(phone) {
+                align-items: stretch;
+
+
+            }
+
+            &--items {
+                margin: 2rem 0;
+                width: 25rem;
+
+                text-align: center;
+                // display: flex;
+                // justify-content: space-between;
+                // align-items: center;
+
+                @include breakpoint(tab) {
+                    width: 14rem;
+                    text-align: center;
+                }
+
+            }
+        }
+    }
+}
+
+.services-icons {
+    width: 4.5rem;
+    height: 4.5rem;
+    display: block;
+    margin: 1.2rem auto;
+
+
+
+    @include breakpoint(tab) {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin: 0.6rem auto;
+    }
+
+}
+
+.services-title {
+    font-weight: 400;
+    font-family: $heading-font;
+}
+
+.servicePointline-pagelink {
+    display: grid;
+    place-items: center;
+}
+
+
+// =================
+// Pointline Different section
+// =================
+
+#differentPointline {
+    width: 100vw;
+    position: relative;
+
+    @include breakpoint(phone) {
+        padding-top: 5rem;
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 10vw;
+        height: 50vh;
+        top: 0;
+        right: 0;
+        background-color: $light-grey;
+        z-index: -2;
+
+        @include breakpoint(phone) {
+            display: none;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 10vw;
+        height: calc(100% + 15rem);
+        top: -4rem;
+        left: 0;
+        background-color: $light-grey;
+        z-index: -4;
+
+        @include breakpoint(phone) {
+            width: 30vw;
+            height: calc(100% + 4rem);
+            top: -2rem;
+        }
+    }
+
+    .differentPointline {
+        width: 80vw;
+        margin: auto;
+        position: relative;
+
+        @include breakpoint(phone) {
+            width: 100%;
+
+        }
+
+        h3 {
+            width: 30rem;
+            position: absolute;
+            top: -4rem;
+            left: 4rem;
+
+            @include breakpoint(phone) {
+                width: 100%;
+                left: 0;
+                padding: 0 2rem;
+
+            }
+
+        }
+
+        &-image {
+            height: 50vh;
+            position: relative;
+            z-index: -3;
+
+            @include breakpoint(phone) {
+                height: auto;
+            }
+
+
+            img {
+                -o-object-position: left;
+                object-position: left;
+            }
+        }
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+
+            @include breakpoint(phone) {
+                flex-direction: column;
+            }
+
+            &--heading {
+                width: 40%;
+                padding-left: 4rem;
+                padding-right: 8rem;
+
+                @include breakpoint(phone) {
+                    width: 100%;
+                    padding: 0 2rem;
+                }
+            }
+
+            &--article {
+                width: 60%;
+                padding-right: 2rem;
+                text-align: justify;
+
+                @include breakpoint(phone) {
+                    width: 100%;
+                    padding: 0 2rem;
+
+                }
+            }
+        }
+    }
+
+}
+
+// =================
+// Projects section
+// =================
+
+
+#pointlineProjects {
+    width: 100vw;
+
+    .pointlineProjects {
+        width: 90vw;
+        margin-left: auto;
+
+
+        @include breakpoint(phone) {
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+
+        &-heading {
+            width: 90%;
+            text-align: right;
+            padding-right: 3rem;
+            position: relative;
+
+            @include breakpoint(phone) {
+                padding: 0;
+                width: 100%;
+                text-align: left;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -0.5rem;
+                right: 3rem;
+                background-color: $accent-color;
+                height: 0.4rem;
+                width: 15rem;
+
+                @include breakpoint(phone) {
+                    left: 0;
+
+                }
+
+            }
+
+        }
+
+        &-rowone {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            @include breakpoint(phone) {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            a {
+                padding-bottom: 4rem;
+
+                @include breakpoint(phone) {
+                    padding: 2rem 0;
+                }
+            }
+
+            &--images {
+                display: flex;
+                height: 55vh;
+
+                @include breakpoint(tab) {
+                    height: auto;
+                }
+
+                @include breakpoint(phone) {
+                    flex-direction: column;
+
+                }
+
+            }
+        }
+
+        &-rowtwo {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            @include breakpoint(phone) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+
+            h3 {
+                padding-bottom: 4rem;
+                position: relative;
+
+                @include breakpoint(phone) {
+                    order: 2;
+
+                }
+
+                &::after {
+                    content: "explore";
+                    position: absolute;
+                    top: -2.5rem;
+                    left: 0;
+                    color: $accent-color;
+                    font-family: $heading-font;
+
+                    @include breakpoint(phone) {
+                        top: 2.5rem;
+                    }
+                }
+            }
+
+            &--images {
+                display: flex;
+                height: 55vh;
+
+                @include breakpoint(tab) {
+                    height: auto;
+                }
+
+                @include breakpoint(phone) {
+                    flex-direction: column;
+
+                }
+            }
+        }
+    }
+}
+
+.pointlineProjects-rowone--images {
+    width: 90%;
+
+    @include breakpoint(phone) {
+        width: 100%;
+    }
+
+    .rowone-image {
+        width: 100%;
+        height: 100%;
+        padding: 4rem 2rem;
+
+        @include breakpoint(phone) {
+            padding: 2rem 0;
+        }
+
+        div {
+            height: 100%;
+            box-shadow: $light-shadow;
+            border-radius: $radius2;
+        }
+    }
+}
+
+.pointlineProjects-rowtwo--images {
+    width: 90%;
+
+    @include breakpoint(phone) {
+        width: 100%;
+    }
+
+    .rowtwo-image {
+        width: 100%;
+        height: 100%;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-left: 4rem;
+
+        @include breakpoint(phone) {
+            padding: 2rem 0;
+        }
+
+        div {
+            height: 100%;
+            box-shadow: $light-shadow;
+            border-radius: $radius2;
+        }
+    }
+}
+
+
+// =================
+// Clients section
+// =================
+
+
+#pointlineclients {
+    width: 100vw;
+    background-color: $light-grey;
+    padding: 5rem 0;
+
+
+    .pointlineclients {
+        width: 85vw;
+        margin: 0 auto;
+
+
+
+        @include breakpoint(phone) {
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+        &-logo {
+            padding: 4rem 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+
+            @include breakpoint(phone) {
+                padding-bottom: 0;
+            }
+
+            img {
+                height: 8rem;
+
+
+                @include breakpoint(phone) {
+                    height: 4rem;
+                }
+
+            }
+        }
+    }
+}
+
+// =================
+// Contact section
+// =================
+
+
+#contactPointline {
+    width: 100vw;
+    padding: 5rem 0;
+
+    .contactPointline {
+        width: 85vw;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint(phone) {
+            flex-direction: column;
+            width: 100%;
+            padding: 2rem;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+    }
+}

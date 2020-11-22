@@ -1,0 +1,159 @@
+#contactForm {
+    width: 100vw;
+    margin-top: -5rem;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 5rem;
+
+    @include breakpoint(phone) {
+        margin: 5rem 0;
+    }
+
+
+    .contactForm {
+        width: 70vw;
+        margin: 0 auto;
+        display: flex;
+        padding: 8rem 0;
+        background-color: hsl(210, 50%, 96%);
+        box-shadow: $dark-shadow;
+        border-radius: $radius2;
+
+        @include breakpoint(tab) {
+            width: 90vw;
+        }
+
+        @include breakpoint(phone) {
+            width: 100%;
+            flex-direction: column;
+            padding: 4rem 2rem;
+
+        }
+
+
+        &-card {
+            width: 60%;
+            padding: 4rem;
+            background-color: $accent-color;
+            transform: translateX(-10rem);
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            box-shadow: $dark-shadow;
+            border-radius: $radius2;
+
+
+            @include breakpoint(tab) {
+                transform: translateX(-4rem);
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+                transform: translateX(0);
+                margin-bottom: 5rem;
+            }
+
+        }
+
+        &-form {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: stretch;
+            padding-right: 10rem;
+
+            @include breakpoint(tab) {
+                padding-right: 4rem;
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+                padding: 0;
+            }
+
+        }
+    }
+}
+
+.contactForm-card>* {
+    display: block;
+    margin-bottom: 2.1rem;
+
+
+}
+
+.contactForm-card--phone {
+    a {
+        display: block;
+        font-size: $step01;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.formDiv {
+    width: 100%;
+
+    .formLabel,
+    .formInput,
+    .formTextarea {
+        display: block;
+        width: 100%;
+        font-family: inherit;
+
+
+
+    }
+
+    .formLabel {
+        font-family: $heading-font;
+    }
+
+    .formInput {
+        background-color: hsl(210, 18%, 90%);
+        border: 2px solid hsl(210, 18%, 90%);
+        padding: 0.7rem;
+        margin-bottom: 1.6rem;
+        transition: 100ms ease;
+        box-shadow: $light-shadow;
+        border-radius: $radius2;
+
+        &:hover,
+        &:focus {
+            transform: translateY(-3px);
+            outline: none;
+            background-color: $white;
+            border: 2px solid $accent-color;
+        }
+
+        &:valid {
+            border: #57BD65 2px solid;
+        }
+
+    }
+
+    .formTextarea {
+        height: 20vh;
+        resize: vertical;
+        background-color: hsl(210, 18%, 90%);
+        border: 2px solid hsl(210, 18%, 90%);
+        padding: 1rem;
+        margin-bottom: 1.6rem;
+        transition: 100ms ease;
+        box-shadow: $light-shadow;
+        border-radius: $radius2;
+
+        &:hover,
+        &:focus {
+            transform: translateY(-3px);
+            outline: none;
+            border: $accent-color 2px solid;
+            background-color: $white;
+        }
+    }
+
+
+
+}

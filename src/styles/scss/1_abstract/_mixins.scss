@@ -1,0 +1,61 @@
+// Mixin for Responsive Design
+
+
+@mixin breakpoint($point) {
+    @if $point==twok-above {
+        @media (min-width: 2860px) {
+            @content;
+        }
+    }
+
+    @else if $point==large-desktop {
+        @media (min-width: 1900px) {
+            @content;
+        }
+    }
+
+    @else if $point==tab-land {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @else if $point==tab {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+
+
+    @else if $point==phone {
+        @media (max-width: 680px) {
+            @content;
+        }
+    }
+
+    @else if $point==small-phone {
+        @media (max-width: 414px) {
+            @content;
+        }
+    }
+}
+
+
+// Responsive Mixin Usage
+
+// body {
+//     background-color: blue;
+
+//     @include breakpoint(large-desktop) {
+//         background-color: yellow;
+//     }
+
+//     @include breakpoint(tab) {
+//         background-color: red;
+//     }
+
+//     @include breakpoint(phone) {
+//         background-color: pink;
+//     }
+
+// }

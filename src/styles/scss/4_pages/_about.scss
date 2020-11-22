@@ -1,0 +1,355 @@
+#aboutIntro {
+    width: 100vw;
+
+
+    .aboutIntro {
+        width: 85vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        @include breakpoint(tab) {
+            width: 100vw;
+            padding: 4rem;
+            align-items: center;
+        }
+
+        @include breakpoint(phone) {
+            padding: 2rem;
+            flex-direction: column;
+
+        }
+
+        &-image {
+            width: 50%;
+            padding: 5rem;
+
+            @include breakpoint(tab) {
+                padding: 0;
+                padding-right: 2rem;
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 3.2rem;
+
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 20rem;
+                height: 20rem;
+                background-color: $dark-blue;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+
+                @include breakpoint(phone) {
+                    display: none;
+                }
+            }
+        }
+
+        &-content {
+            width: 50%;
+            padding: 5rem;
+
+            @include breakpoint(tab) {
+                padding: 0;
+                padding-left: 2rem;
+                align-self: center;
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+                padding: 0;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 35rem;
+                height: 28rem;
+                background-color: $light-grey;
+                top: 0;
+                left: 50%;
+                z-index: -1;
+
+                @include breakpoint(tab) {
+                    width: 50%;
+                    height: 50%;
+                }
+
+                @include breakpoint(phone) {
+                    width: 50%;
+                    height: 30%;
+                }
+            }
+
+            &--heading {}
+
+            &--para {
+                text-align: justify;
+            }
+        }
+    }
+
+    .aboutDetails {
+        width: 70vw;
+        margin: 10rem auto;
+
+        text-align: justify;
+
+
+        @include breakpoint(phone) {
+            width: 100%;
+            padding: 3.2rem 2rem;
+            margin: 0;
+        }
+    }
+}
+
+
+#pointlineVision {
+    width: 100vw;
+
+    .pointlineVision {
+        width: 70vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(tab) {
+            width: 100%;
+            padding: 0 4rem;
+        }
+
+        @include breakpoint(phone) {
+            padding: 2rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-content {
+            width: 50%;
+            margin-bottom: 3.2rem;
+            text-align: justify;
+
+            @include breakpoint(phone) {
+                width: 100%;
+
+            }
+
+            a {
+                font-size: $step01;
+                font-family: $heading-font;
+                color: $accent-color;
+
+
+            }
+
+        }
+
+
+
+        &-image {
+            width: 45%;
+            position: relative;
+
+            div {
+                box-shadow: $light-shadow;
+                border-radius: $radius2;
+                height: 100%;
+            }
+
+            @include breakpoint(tab) {
+                height: auto;
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+            }
+
+            &::after {
+                content: "VISION";
+                position: absolute;
+                top: 10rem;
+                left: -20rem;
+                transform: rotate(-90deg);
+                line-height: 1;
+                font-size: $step06;
+                color: $light-grey;
+                letter-spacing: 4px;
+                opacity: 0.3;
+
+                @include breakpoint(phone) {
+                    display: none;
+                }
+            }
+
+        }
+    }
+}
+
+#our-approach {
+    width: 100vw;
+
+    .our-approach {
+        width: 100%;
+        padding: 0 7.5vw;
+        min-height: 90vh;
+        background-image: url("../../images/our-ap.jpg");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        @include breakpoint(tab) {
+            padding: 4rem;
+            min-height: 70vh;
+        }
+
+        @include breakpoint(phone) {
+            padding: 2rem;
+            background-position: center;
+
+        }
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: -15rem;
+            left: 0;
+            width: 100%;
+            height: 15rem;
+            background-color: $light-grey;
+
+            @include breakpoint(phone) {
+                display: none;
+            }
+        }
+
+
+        &--content {
+            width: 40%;
+            margin-left: auto;
+            text-align: justify;
+
+            @include breakpoint(tab) {
+                width: 100%;
+                padding: 4rem 0;
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+#whyUs {
+    width: 100vw;
+
+
+    .whyUs {
+        width: 85vw;
+        margin: 10rem auto;
+        text-align: center;
+
+        @include breakpoint(tab) {
+            width: 100%;
+            padding: 0 4rem;
+        }
+
+        @include breakpoint(phone) {
+
+            padding: 0 2rem;
+        }
+
+        hr {
+            margin: 0 auto;
+        }
+
+        &-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+
+
+
+            &--content {
+                width: 23%;
+                background-color: $pure-white;
+                border-radius: $radius2;
+                box-shadow: $light-shadow;
+                padding: 2rem;
+
+                @include breakpoint(phone) {
+                    width: 100%;
+                    margin: 1.6rem 0;
+                }
+
+                span {
+                    font-size: $step03;
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+}
+
+
+#showcase-image {
+    width: 100vw;
+
+    .showcase-image {
+        width: 85vw;
+        margin: 10rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint(tab) {
+            width: 100%;
+            padding: 0 4rem;
+        }
+
+        @include breakpoint(phone) {
+            padding: 0 2rem;
+        }
+
+        &--img {
+            width: 23%;
+
+            @include breakpoint(phone) {
+                width: 100%;
+                margin: 1.6rem 0;
+
+            }
+
+            div {
+                height: 25vh;
+                box-shadow: $light-shadow;
+                border-radius: $radius2;
+
+                @include breakpoint(phone) {
+                    height: auto;
+
+                }
+            }
+
+        }
+    }
+}

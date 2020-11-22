@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40.788" height="38" viewBox="0 0 40.788 38">
+  <g id="Expand" transform="translate(-2 -5)" style="isolation: isolate">
+    <path id="Path_53" data-name="Path 53" d="M42.108,8.4H7.438V5.68A.68.68,0,0,0,6.759,5H4.719A2.719,2.719,0,0,0,2,7.719V37.63A2.719,2.719,0,0,0,4.719,40.35H42.108a.68.68,0,0,0,.68-.68V9.079A.68.68,0,0,0,42.108,8.4ZM3.36,7.719a1.36,1.36,0,0,1,1.36-1.36h1.36V34.911H4.719a2.7,2.7,0,0,0-1.36.365ZM41.428,38.99H4.719a1.36,1.36,0,1,1,0-2.719H6.759a.68.68,0,0,0,.68-.68V9.759h33.99Z" fill="#778ba0"/>
+    <path id="Path_54" data-name="Path 54" d="M14.68,49.118H41.872a.68.68,0,0,0,.68-.68V43.68a.68.68,0,0,0-.68-.68H14.68a.68.68,0,0,0-.68.68v4.759A.68.68,0,0,0,14.68,49.118Zm.68-4.759h1.36V46.4h1.36V44.36h1.36v1.36H20.8V44.36h1.36V46.4h1.36V44.36h1.36v1.36h1.36V44.36H27.6V46.4h1.36V44.36h1.36v1.36h1.36V44.36h1.36V46.4h1.36V44.36h1.36v1.36h1.36V44.36h1.36V46.4h1.36V44.36h1.36v3.4H15.36Z" transform="translate(-3.842 -12.168)" fill="#778ba0"/>
+    <rect id="Rectangle_41" data-name="Rectangle 41" width="2" height="1" transform="translate(12 6)" fill="#778ba0"/>
+    <rect id="Rectangle_42" data-name="Rectangle 42" width="11" height="1" transform="translate(15 6)" fill="#778ba0"/>
+    <rect id="Rectangle_43" data-name="Rectangle 43" width="23" height="1" transform="translate(16 42)" fill="#778ba0"/>
+    <path id="Path_55" data-name="Path 55" d="M14.68,32H34.394a.68.68,0,0,0,.68-.68v-6.8a.68.68,0,0,0-.68-.68H31V25.2h2.719v5.438H24.2v-1.36h-1.36v1.36H15.36V25.2h2.719v-1.36H15.36V16.36h7.478v7.478H20.8V25.2h2.039v1.36H24.2V25.2h4.079v-1.36H24.2V15.68a.68.68,0,0,0-.68-.68H14.68a.68.68,0,0,0-.68.68V31.315A.68.68,0,0,0,14.68,32Z" transform="translate(-3.842 -3.202)" fill="#778ba0"/>
+    <rect id="Rectangle_44" data-name="Rectangle 44" width="2" height="1" transform="translate(27 12)" fill="#778ba0"/>
+    <rect id="Rectangle_45" data-name="Rectangle 45" width="9" height="1" transform="translate(30 12)" fill="#778ba0"/>
+    <rect id="Rectangle_46" data-name="Rectangle 46" width="13" height="1" transform="translate(26 15)" fill="#778ba0"/>
+    <rect id="Rectangle_47" data-name="Rectangle 47" width="11" height="2" transform="translate(26 17)" fill="#778ba0"/>
+    <path id="Path_56" data-name="Path 56" d="M52.759,27H48.68a.68.68,0,0,0-.68.68v7.478a.68.68,0,0,0,.68.68h4.079a.68.68,0,0,0,.68-.68V27.68A.68.68,0,0,0,52.759,27Zm-.68,7.478H49.36V28.36h2.719Z" transform="translate(-14.729 -7.044)" fill="#778ba0"/>
+  </g>
+</svg>

@@ -1,0 +1,216 @@
+#footer {
+    background-color: $light-blue;
+    width: 100vw;
+    color: $white;
+
+    .footer {
+        width: 85vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 5rem 0;
+
+        @include breakpoint(tab) {
+            width: 100%;
+            padding: 5rem 4rem;
+
+        }
+
+        @include breakpoint(phone) {
+            flex-direction: column;
+            padding: 5rem 2rem;
+        }
+
+
+        &-logo {
+            width: 30%;
+            padding-right: 2rem;
+
+            @include breakpoint(tab) {
+                width: 40%;
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+                padding: 0;
+            }
+
+
+            &--icon {
+                width: 8rem;
+
+                @include breakpoint(phone) {
+                    margin: 0 auto;
+
+                }
+
+            }
+
+            h4 {
+                width: 80%;
+
+                @include breakpoint(phone) {
+                    width: 100%;
+                    text-align: center;
+
+                }
+            }
+
+            &--social {
+                margin-left: -0.7rem;
+                display: flex;
+
+                @include breakpoint(phone) {
+                    width: 100%;
+                    margin: 0 auto;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+
+                a img {
+                    width: 3rem;
+                    height: 3rem;
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        &-sitelinks {
+            width: 30%;
+            text-align: center;
+            position: relative;
+            color: $white;
+
+            @include breakpoint(tab) {
+                width: 20%;
+
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+                margin: 5rem 0;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                top: 0;
+                left: -1rem;
+                background-color: $accent-color;
+
+                @include breakpoint(phone) {
+                    top: -2rem;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+
+                }
+
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                top: 0;
+                right: -1rem;
+                background-color: $accent-color;
+
+                @include breakpoint(phone) {
+                    top: calc(100% + 2rem);
+                    right: 0;
+                    width: 100%;
+                    height: 2px;
+
+                }
+            }
+
+            li {
+                margin-bottom: 1rem;
+                transition: 150ms ease;
+                font-size: 600;
+                letter-spacing: 2px;
+
+                &:hover,
+                &:focus {
+                    color: $accent-color;
+                }
+
+            }
+        }
+
+        &-contact {
+            width: 30%;
+            text-align: right;
+
+            @include breakpoint(tab) {
+                width: 40%;
+
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+                text-align: center;
+
+            }
+
+            &--address {
+                li {
+                    text-transform: capitalize;
+                    font-family: $heading-font;
+                }
+
+                @include breakpoint(phone) {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+
+                address {
+                    width: 80%;
+                    text-align: right;
+
+                    @include breakpoint(phone) {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+
+            }
+
+            &--phone {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                @include breakpoint(phone) {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+
+            &--email {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                @include breakpoint(phone) {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        color: $light-grey;
+        font-size: $step0;
+    }
+}

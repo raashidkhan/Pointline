@@ -1,0 +1,30 @@
+@import "1_abstract/functions";
+@import "1_abstract/variables";
+@import "1_abstract/mixins";
+
+
+@import "2_base/base";
+@import "2_base/typography";
+@import "2_base/utilities";
+@import "2_base/animations";
+
+@import "3_layout/navbar";
+@import "3_layout/footer";
+
+@import "4_pages/homepage";
+@import "4_pages/services";
+@import "4_pages/about";
+@import "4_pages/contact";
+@import "4_pages/projects";
+@import "4_pages/team";
+@import "4_pages/404";
+@import "4_pages/thanks";
+
+
+
+@import "5_components/buttons";
+@import "5_components/page-links";
+@import "5_components/underline";
+@import "5_components/contactform";
+@import "5_components/imageFrontcard";
+@import "5_components/contentFrontcard";

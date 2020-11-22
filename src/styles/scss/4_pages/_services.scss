@@ -1,0 +1,163 @@
+#servicesBanner {
+    width: 100vw;
+
+
+    .servicesBanner {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 90vh;
+        padding: 10rem 7.5vw;
+        background-image: linear-gradient(to left,
+                rgba(255, 255, 255, 0.7),
+                rgba(255, 255, 255, 0.7)),
+            url("../../images/services-banner.jpg");
+        background-size: cover;
+        background-position: center;
+
+        @include breakpoint(tab) {
+            height: auto;
+            min-height: 60vh;
+
+
+        }
+
+        @include breakpoint(phone) {
+            min-height: 90vh;
+        }
+
+        h2,
+        p {
+            width: 40%;
+
+            @include breakpoint(phone) {
+                width: 100%;
+
+            }
+        }
+    }
+
+
+
+}
+
+.servicesGallery {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    margin: 0 auto;
+    margin-top: -5rem;
+    background-color: $pure-white;
+    flex-wrap: wrap;
+    box-shadow: $light-shadow;
+
+    @include breakpoint(tab) {
+        width: 100%;
+
+    }
+
+    @include breakpoint(phone) {
+        width: 100%;
+        padding: 2rem;
+        background-color: transparent;
+
+    }
+
+    &-images {
+        width: 30%;
+        height: 25rem;
+
+        div {
+            height: 100%;
+        }
+
+        @include breakpoint(phone) {
+            width: 100%;
+            height: auto;
+
+        }
+    }
+
+
+}
+
+
+
+
+
+#servicesDetail {
+    width: 100vw;
+    padding: 10rem 0;
+
+    .servicesDetail {
+        width: 80vw;
+        margin: 0 auto;
+
+
+        &-cardContainer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem 2rem;
+
+            @include breakpoint(tab) {
+                grid-template-columns: repeat(2, 1fr);
+
+
+            }
+
+            @include breakpoint(phone) {
+                grid-template-columns: 1fr;
+
+
+            }
+
+        }
+    }
+}
+
+.servicesDetails-card {
+    background-color: $pure-white;
+    padding: 2rem;
+    box-shadow: $light-shadow;
+    border-radius: $radius2;
+    transition: 100ms ease-out;
+
+
+    &:hover {
+        background-color: $light-blue;
+        color: $pure-white;
+    }
+
+    .servicesDetails-title {
+        text-transform: capitalize;
+        min-height: 4rem;
+        font-weight: 600;
+
+
+    }
+
+    .servicesDetails-para {
+        padding-left: 2rem;
+
+
+        li {
+            text-transform: capitalize;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0.5rem;
+                height: 0.5rem;
+                top: 1rem;
+                left: -1.5rem;
+
+                background-color: $accent-color;
+            }
+        }
+    }
+}

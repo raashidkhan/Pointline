@@ -1,0 +1,5 @@
+// To prevent sass from changing color format from hsl to hex
+
+@function hsl($h, $s, $l) {
+    @return unquote('hsl(#{$h}, #{$s}, #{$l})');
+}

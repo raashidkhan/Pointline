@@ -1,0 +1,25 @@
+.btn-primary {
+    display: inline-block;
+    background-color: $accent-color;
+    color: $white;
+    border: 2px solid $accent-color;
+    outline: none;
+    padding: 1rem 3rem;
+    font-weight: 400;
+    transition: all 200ms ease;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: $light-shadow;
+    border-radius: $radius2;
+
+    &:hover,
+    &:focus {
+        background-color: $white;
+        color: $accent-color;
+        transform: scale(1.005) translateY(-4px);
+        -webkit-animation: animate-hue 500ms ease infinite alternate;
+                animation: animate-hue 500ms ease infinite alternate;
+
+    }
+
+}

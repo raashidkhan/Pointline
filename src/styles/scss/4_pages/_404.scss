@@ -1,0 +1,24 @@
+.fourOfour-section {
+    width: 100vw;
+    min-height: 100vh;
+    text-align: center;
+    padding-bottom: 5rem;
+
+    @include breakpoint(tab) {
+        min-height: 80vh;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fourOfour-image {
+        padding: 5rem 10rem;
+
+        @include breakpoint(tab) {
+            padding: 0;
+
+        }
+    }
+}

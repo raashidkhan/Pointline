@@ -1,0 +1,116 @@
+#contactHero {
+    width: 100vw;
+
+    .contactHero {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90vh;
+        padding: 10rem 7.5vw;
+        background-image:
+            linear-gradient(to left,
+                rgba(255, 255, 255, 0.4),
+                rgba(255, 255, 255, 0.4)),
+            url("../../images/contact-banner.jpg");
+        background-size: cover;
+        background-position: center;
+
+
+        @include breakpoint(tab) {
+            height: auto;
+            align-items: flex-end;
+
+        }
+
+        &-heading {
+            width: 50%;
+
+            &--social {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                li a img {
+                    margin-right: 2.5rem;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+
+
+        }
+
+
+    }
+}
+
+
+#contactMaps {
+    margin-top: 5rem;
+    width: 100vw;
+
+    .contactMaps {
+        width: 100%;
+        display: flex;
+
+        @include breakpoint(tab) {
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        &-mumbai {
+            width: 50%;
+            padding: 2rem 3rem;
+
+            @include breakpoint(tab) {
+                padding: 1rem;
+                width: 100%;
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+                padding: 2rem 0;
+            }
+
+        }
+
+        &-patna {
+            width: 50%;
+            padding: 2rem 3rem;
+
+            @include breakpoint(tab) {
+                padding: 1rem;
+                width: 100%;
+            }
+
+            @include breakpoint(phone) {
+                width: 100%;
+                padding: 2rem 0;
+            }
+        }
+    }
+}
+
+
+.map-area {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+
+    @include breakpoint(tab) {
+        height: 50vh;
+    }
+
+    iframe {
+
+        div {
+            overflow: hidden;
+
+            #gmap_canvas {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
