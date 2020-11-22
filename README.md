@@ -24,6 +24,7 @@ https://www.kubo.co.in/project/pointline-architects
 
 ### Files and Directories
 
+```
 Folder Structure
 src/
 ┣ components/
@@ -159,6 +160,9 @@ src/
 ┃ ┃ ┃ ┣ \_page-links.scss
 ┃ ┃ ┃ ┗ \_underline.scss
 ┃ ┗ main.scss
+
+
+```
 
 ### Credits
 
