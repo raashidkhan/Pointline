@@ -75,7 +75,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="copyright">All right reserved. Pointline Architects 2020</p>
+      <p className="copyright">
+        All right reserved. © {new Date().getFullYear()} Pointline Architects
+      </p>
     </footer>
   )
 }
